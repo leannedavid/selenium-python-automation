@@ -19,7 +19,7 @@ driver.get(url)
 # search = driver.find_element(By.CLASS_NAME, 'gLFyf')
 # search = driver.find_element(By.NAME, 'q')
 # search = driver.find_element (By.ID, '') # input class doesn't have an id
-search = driver.find_element(By.XPATH, '../div[1]/div[3]/form/div[1]/div[1]/div[1]/div/div[2]/input')
+search = driver.find_element(By.XPATH, '//div[1]/div[3]/form/div[1]/div[1]/div[1]/div/div[2]/input')
 
 # Clears the input field of text, if any
 search.clear()
@@ -28,7 +28,9 @@ search.clear()
 search.send_keys('Selenium exercises')
 
 # Finds the search button to press, same different ways to search for the button
-search_button = driver.find_element(By.NAME, 'btnK')
+# search_button = driver.find_element(By.NAME, 'btnK')
+# search_button = driver.find_element(By.CLASS_NAME, 'gNO89b')
+search_button = driver.find_element(By.XPATH, '//div[1]/div[3]/form/div[1]/div[1]/div[4]/center/input[1]')
 
 # Presses Enter on the keyboard
 search_button.send_keys(Keys.ENTER)
